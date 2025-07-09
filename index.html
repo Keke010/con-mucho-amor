@@ -9,12 +9,11 @@
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Comic Sans MS', cursive;
+      font-family: 'Handlee', cursive;
       background: linear-gradient(135deg, #ffd8be, #fbc2eb, #d0c7ff);
       background-size: 400% 400%;
-      animation: gradientBG 15s ease infinite;
+      animation: gradientBG 30s ease infinite;
       color: white;
-      text-align: center;
     }
 
     @keyframes gradientBG {
@@ -24,31 +23,39 @@
     }
 
     .container {
-      max-width: 600px;
-      margin: auto;
+      max-width: 700px;
+      margin: 4em auto;
       padding: 2em;
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.15);
       border-radius: 20px;
       box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
     }
 
+    h1 {
+      font-size: 2em;
+      margin-bottom: 1em;
+      text-align: left;
+    }
+
     .message {
       font-size: 1.2em;
-      line-height: 1.8em;
+      line-height: 1.9em;
       text-align: left;
-      padding: 1em;
+      padding: 1.5em;
       background-color: rgba(255, 255, 255, 0.15);
       border-radius: 10px;
-      font-family: 'Georgia', serif;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      color: white;
     }
+
     .message p {
-      margin-bottom: 1.2em;
-      text-indent: 1em;
+      margin-bottom: 1.5em;
+      text-indent: 1.5em;
     }
-		
 
     .gif {
+      display: block;
+      margin: 30px auto 0 auto;
       max-width: 100%;
       border-radius: 15px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.3);
@@ -109,7 +116,6 @@
 </head>
 <body>
   <div class="hearts">
-    <!-- corazones generados dinámicamente -->
     <script>
       for (let i = 0; i < 30; i++) {
         const heart = document.createElement('div');
@@ -123,14 +129,14 @@
   </div>
 
   <div class="container">
-    <h1>Para Leslie💖:</h1>
+    <h1>Para Leslie 💖:</h1>
     <div class="message">
-      <p>Hola, poto :p </p>
-      <p>Solo quiero recordarte lo fuerte, valiente y especial que eres.<br>
-      Sé que estás pasando por un momento difícil, pero no estás sola.<br>
-      Estoy aquí para apoyarte en cada caída y en cada logro.<br><br>
-      Tómate tu tiempo, respira y sigue adelante porque yo creo en ti con todo mi corazón.<br><br>
-      Te quiero mucho 💖</p>
+      <p>Hola, poto :p</p>
+      <p>Solo quiero recordarte lo fuerte, valiente y especial que eres.</p>
+      <p>Sé que estás pasando por un momento difícil, pero no estás sola.</p>
+      <p>Estoy aquí para apoyarte en cada caída y en cada logro.</p>
+      <p>Tómate tu tiempo, respira y sigue adelante porque yo creo en ti con todo mi corazón.</p>
+      <p>Te quiero mucho 💖</p>
     </div>
     <img class="gif" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHRnMHBuN2RkNWxocWZhb2JqZjFvc3g0M3o4NTA1Z2VmcjY3anF5bCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3oriO0OEd9QIDdllqo/giphy.gif" alt="gatitos con corazones" />
   </div>
