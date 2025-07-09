@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Para ti, con mucho amor</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Comic Sans MS', cursive;
+      background: linear-gradient(135deg, #f9a825, #f06292, #ba68c8);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: white;
+      text-align: center;
+    }
+
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      padding: 2em;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    }
+
+    .message {
+      font-size: 1.3em;
+      line-height: 1.8em;
+      margin-bottom: 20px;
+    }
+
+    .gif {
+      max-width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: pink;
+      transform: rotate(45deg);
+      animation: float 6s linear infinite;
+      opacity: 0.7;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: pink;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) rotate(45deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) rotate(45deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="hearts">
+    <!-- corazones generados dinámicamente -->
+    <script>
+      for (let i = 0; i < 30; i++) {
+        const heart = document.createElement('div');
+        heart.className = 'heart';
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.animationDuration = (Math.random() * 5 + 5) + 's';
+        heart.style.width = heart.style.height = (Math.random() * 15 + 15) + 'px';
+        document.querySelector('.hearts').appendChild(heart);
+      }
+    </script>
+  </div>
+
+  <div class="container">
+    <h1>Para Leslie💖:</h1>
+    <div class="message">
+      <p>Hola, poto :p </p>
+      <p>Solo quiero recordarte lo fuerte, valiente y especial que eres.<br>
+      Sé que estás pasando por un momento difícil, pero no estás sola.<br>
+      Estoy aquí para apoyarte en cada caída y en cada logro.<br><br>
+      Tómate tu tiempo, respira y sigue adelante porque yo creo en ti con todo mi corazón.<br><br>
+      Te quiero mucho 💖</p>
+    </div>
+    <img class="gif" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHRnMHBuN2RkNWxocWZhb2JqZjFvc3g0M3o4NTA1Z2VmcjY3anF5bCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3oriO0OEd9QIDdllqo/giphy.gif" alt="gatitos con corazones" />
+  </div>
+</body>
+</html>
